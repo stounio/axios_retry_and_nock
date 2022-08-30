@@ -1,0 +1,22 @@
+{
+  "name": "axios_retry_and_nock",
+  "version": "1.0.0",
+  "description": "Sample project for testing Axios with a retry strategy on failed requests using Nock",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc mocha"
+  },
+  "author": "Guillaume Pichot",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^10.0.0",
+    "nock": "^13.2.9",
+    "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "retry-axios": "^2.6.0"
+  }
+}
