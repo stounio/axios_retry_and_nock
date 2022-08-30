@@ -28,7 +28,7 @@ describe("Axios client", async () => {
     scope.done();
   });
 
-  it("should retry greetings when the world experienced has system issue", async () => {
+  it("should retry greetings when the world experiences difficulties", async () => {
     const scope = nock(TEST_DOMAIN)
       .get(/greetings/)
       .reply(500, { message: "The world is having some difficulties" })
