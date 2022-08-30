@@ -15,7 +15,7 @@ Packages on NPM:
 
 ## Considerations on Retry Axios and Nock
 
-`Retry Axios` distinguishes the retry strategy for handling system errors that would be returned by a server from network errors caused by the infrastructure. This is a great and clever way to adopt and refine the retry strategy that best suits your need.
+`Retry Axios` distinguishes the retry strategy for handling system errors that would be returned by a server from network errors caused by the infrastructure. This is a great and clever way to adopt and refine the retry strategy that best suits your needs.
 
 `Nock` is currently the most popular mocking framework for intercepting HTTP requests and emulating interactions with a backend service. Its implementation is superior to alternative mocking framework such as `AxiosMock` and its interface easier to use when instrumenting calls to a backend service.
 
