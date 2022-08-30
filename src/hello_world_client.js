@@ -11,7 +11,7 @@ const greetings = async () => {
     headers: { "User-Agent": "NewbieToAxiosAndNock" },
     raxConfig: {
       retry: numberOfRetries,
-      noResponseRetries: 0,
+      noResponseRetries: numberOfRetries,
       onRetryAttempt: (error) => {
         console.error(`[HELLO-WORLD-RETRY] Retrying request to Hello World\n${error}`);
       },

@@ -41,4 +41,18 @@ describe("Axios client", async () => {
     expect(response.data).to.deep.equal({ message: "Hello World" });
     scope.done();
   });
+
+  it("should retry greetings when the world failed to be reached over the network", async () => {
+    const scope = nock(TEST_DOMAIN)
+      .get(/greetings/)
+      .delay(200)
+      .reply(200, { message: "Hello World" })
+      .get(/greetings/)
+      .reply(200, { message: "Hello World" });
+    const response = await greetings();
+
+    expect(response.status).to.equal(200);
+    expect(response.data).to.deep.equal({ message: "Hello World" });
+    scope.done();
+  });
 });
