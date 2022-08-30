@@ -8,7 +8,7 @@ const numberOfRetries = process.env.NUMBER_OF_RETRIES || 3;
 const greetings = async () => {
   const config = {
     timeout: 100,
-    headers: { "User-Agent": "NewbieToAxiosAndNock" },
+    headers: { "User-Agent": "NewbieToAxiosRetryAndNock" },
     raxConfig: {
       retry: numberOfRetries,
       noResponseRetries: numberOfRetries,
